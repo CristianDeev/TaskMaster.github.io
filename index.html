@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizador de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <!-- Aquí añadimos el logo e imagen a la izquierda -->
+                <li>
+                    <a href="#">
+                        <img src="logo.png" alt="Logo" style="height: 40px; vertical-align: middle;">
+                        <img src="image.png" alt="Imagen" style="height: 40px; vertical-align: middle;">
+                    </a>
+                </li>
+                <li><a href="#tareas">Tareas</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#calendario">Calendario</a></li>
+                <li><a href="#configuracion">Configuración</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="tareas">
+            <h1>Organizador de Tareas</h1>
+            <form id="nueva-tarea-form">
+                <input type="text" placeholder="Nombre de la tarea" required>
+                <input type="date" required>
+                <textarea placeholder="Descripción breve"></textarea>
+                <button type="submit">Agregar Tarea</button>
+            </form>
+            <div class="tareas-container">
+                <div class="categoria" id="pendientes">
+                    <h2>Pendientes</h2>
+                    <div class="tareas-lista">
+                        <!-- Tareas pendientes aquí -->
+                    </div>
+                </div>
+                <div class="categoria" id="en-proceso">
+                    <h2>En Proceso</h2>
+                    <div class="tareas-lista">
+                        <!-- Tareas en proceso aquí -->
+                    </div>
+                </div>
+                <div class="categoria" id="completadas">
+                    <h2>Completadas</h2>
+                    <div class="tareas-lista">
+                        <!-- Tareas completadas aquí -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
